@@ -20,7 +20,7 @@ This project implements a simple AI-based captcha recognition system that detect
 │   ├── data_pred.csv   # Predicted results
 │   └── data.csv        # Data for training CNN summarized
 │
-├── captcha_model.pth # Trained CNN model weights
+├── captcha_model.pth   # Trained CNN model weights
 ├── .gitignore
 ├── main.ipynb
 └── README.md
