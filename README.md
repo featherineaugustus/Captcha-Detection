@@ -11,21 +11,26 @@ This project implements a simple AI-based captcha recognition system that detect
 - Outputs predicted captcha text to a file for easy integration.
 
 ## Project Structure
-├── images/ # Folder containing captcha images
-├── output/ # Folder for saving predicted captcha texts
-├── data/ # Folder for storing cropped character images and dataset CSV
-├── labels.csv # CSV file with image filenames and corresponding character labels
+```bash
+├── sampleCaptchas
+│   ├── data            # Data for training CNN
+│   ├── input           # Input image folder
+│   ├── output          # Output txt folder
+│   ├── pred            # Predicted results txt folder
+│   ├── data_pred.csv   # Predicted results
+│   └── data.csv        # Data for training CNN summarized
+│
 ├── captcha_model.pth # Trained CNN model weights
-├── captcha.py # Core code including Captcha class and model definition
-├── train.py # Training script (if applicable)
-├── inference.py # Script or example usage for running inference
-├── README.md # Project documentation (this file)
+├── .gitignore
+├── main.ipynb
+└── README.md
+```
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/captcha-recognition.git
-   cd captcha-recognition
+   git clone https://github.com/featherineaugustus/Captcha-Detection
+   cd Captcha-Detection
    ```
 
 
