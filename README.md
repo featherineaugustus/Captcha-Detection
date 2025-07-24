@@ -4,8 +4,8 @@
 This project implements a simple AI-based captcha recognition system that detects and predicts characters in 5-character captchas composed of uppercase letters (A-Z) and digits (0-9). The solution uses a Convolutional Neural Network (CNN) trained on a custom dataset and performs inference by segmenting the captcha image into individual characters and classifying each character separately.
 
 ## Features
-- Handles fixed-length (5-character) captchas with consistent font, spacing, and color scheme.
-- Custom CNN model for character classification trained on user-provided labeled images.
+- Handles fixed-length (5-character) captchas with consistent font, spacing, and colour scheme.
+- Custom CNN model for character classification trained on user-provided labelled images.
 - Image preprocessing including cropping, thresholding, and segmentation into individual character slices.
 - Inference pipeline wrapped into a reusable `Captcha` class with a simple interface.
 - Outputs predicted captcha text to a file for easy integration.
@@ -34,13 +34,13 @@ This project implements a simple AI-based captcha recognition system that detect
    ```
 
 ## Pipeline
-1. Load image
-2. Crop image on the top, bottom, left and right to only expose the 5 characters
-3. Remove all pixels that are not black (background), and invert the color back to BW
-4. Slice the image into 5 equal parts (9 pixels width each)
-5. Perform character predicition for each of the 5 image parts
-6. Combine the predicted characterse in sequence back into a string
-7. Return string as output
+1. Load image.
+2. Crop image on the top, bottom, left and right to only expose the 5 characters.
+3. Remove all pixels that are not black (background), and invert the colour back to BW.
+4. Slice the image into 5 equal parts (9 pixels width each).
+5. Perform character prediction for each of the 5 image parts.
+6. Combine the predicted characters in sequence back into a string.
+7. Return string as output.
 
 ## Usage
 1. Training (see `main.ipynb`)
@@ -48,7 +48,7 @@ This project implements a simple AI-based captcha recognition system that detect
     - Store captcha images in data/.
     - Create a CSV data.csv with columns path, value for each character image.
     - Run the training script to train the CNN model.
-        - In this case, we are using a CNN_Model with 2 convolutional layer and 2 dense layer.
+        - In this case, we are using a CNN_Model with 2 convolutional layer and 2 dense layers.
         - The images are resized to 28 X 28 and normalized before training.
         - The loss function is the Cross Entropy, and optimized with Adam
         - GPU may be enabled during training.
@@ -57,7 +57,7 @@ This project implements a simple AI-based captcha recognition system that detect
         - However, if we were to use a smaller epoch, some characters may be predicted wrongly.
 
 2. Inference (see `main.ipynb`)
-    - Use the provided `Captcha` class at the endto predict the captcha text from an image:
+    - Use the provided `Captcha` class at the end to predict the captcha text from an image:
 
    ```python
     from captcha import Captcha
@@ -76,7 +76,7 @@ This project implements a simple AI-based captcha recognition system that detect
 ## Evaluation
 - Accuracy can be computed by comparing predicted captcha texts against ground truth labels.
     - In this case, we obtained an accuracy of 100%, but then it may be because it is overfitted.
-- Use the provided CSV logs and utility scripts to analyze incorrect predictions.
+- Use the provided CSV logs and utility scripts to analyse incorrect predictions.
 - While we know that the model is overfitted to the training set now, but as the formatting of the characters is always the same, it is alright.
 
 ## Future Work
@@ -84,3 +84,4 @@ This project implements a simple AI-based captcha recognition system that detect
 - Improve segmentation with more robust image processing.
 - Use sequence models (e.g., RNNs, Transformers) for end-to-end captcha recognition.
 - Incorporate data augmentation to improve model robustness.
+
